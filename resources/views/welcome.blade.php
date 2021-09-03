@@ -69,10 +69,10 @@
 
 <body>
     <div class="flex-center position-ref full-height">
-        @if (Route::has('/login'))
+        @if (Route::has('login'))
             <div class="top-right links">
                 @auth
-                    <a href="{{ url('/home') }}">Home</a>
+                    <a href="{{ url('products') }}">Home</a>
                 @else
                     <a href="{{ route('login') }}">Login</a>
 
@@ -89,7 +89,7 @@
             </div>
 
             <div class="links">
-                <a href="https://laravel.com/docs">Docs TESTE</a>
+                <a href="https://laravel.com/docs">Docs</a>
                 <a href="https://laracasts.com">Laracasts TESTE</a>
                 <a href="https://laravel-news.com">News TESTE</a>
                 <a href="https://blog.laravel.com">Blog TESTE</a>

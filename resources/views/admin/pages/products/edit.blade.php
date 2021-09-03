@@ -3,7 +3,9 @@
 @section('title', "Editar Produto {$product->name}")
 
 @section('content')
-    <h1>Editar Produto {{ $product->name }}</h1>
+    <form class="container-sm">
+        <h1>Editar Produto {{ $product->name }}</h1>
+    </form>
 
     <form action="{{ route('products.update', $product->id) }}" method="post" enctype="multipart/form-data">
         @method('PUT')

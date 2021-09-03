@@ -3,27 +3,31 @@
 @section('title', 'Gestão de Produtos')
 
 @section('content')
-    <h1>Exibindo os produtos</h1>
-    <a href="{{ route('products.create') }}" class="btn btn-primary">Cadastrar</a>
+    <form class="container-sm">
+        <h1>Exibindo os produtos</h1>
+        <a href="{{ route('products.create') }}" class="btn btn-primary">Cadastrar</a>
+    </form>
 
     <hr>
 
-    <form action="{{ route('products.search') }}" method="post" class="form form-inline">
-        @csrf
-        <input type="text" name="filter" placeholder="Filtrar:" class="form-control"
-            value="{{ $filters['filter'] ?? '' }}">
-        <hr>
+    <form action="{{ route('products.search') }}" method="post" class="form form-inline container-sm">
+        <div class="col-lg-3 mb-3">
+            @csrf
+            <input type="text" name="filter" placeholder="Filtrar:" class="form form-control"
+                value="{{ $filters['filter'] ?? '' }}">
+            <hr>
 
-        <button type="submit" class="btn btn-info">Pesquisar</button>
+            <button type="submit" class="btn btn-info ">Pesquisar</button>
+        </div>
     </form>
 
-    <table class="table table-striped">
+    <table class="table table-striped container-sm">
         <thead>
             <tr>
-                <th width="100">Imagem</th>
-                <th>Name</th>
-                <th>Preço</th>
-                <th width="100">Ações</th>
+                <th width="200">Imagem</th>
+                <th width="200">Name</th>
+                <th width="200">Preço</th>
+                <th width="200">Ações</th>
             </tr>
         </thead>
         <tbody>

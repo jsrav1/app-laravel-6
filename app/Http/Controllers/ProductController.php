@@ -158,8 +158,6 @@ class ProductController extends Controller
      */
     public function search(Request $request)
     {
-        // dd($request->all());
-
         $filters = $request->except('_token');
 
         $products = $this->repository->search($request->filter);
